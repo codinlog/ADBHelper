@@ -1,42 +1,40 @@
 import QtQuick 2.0
 
 Item {
-    id:appHeader
-    width: parent.width
-    height: 30
+    id:root
+    signal closeImgClicked
     Rectangle{
+        z:1
         id:container
-        width: appHeader.width
-        height: appHeader.height
-        color: "#009966"
+        width: parent.width
+        height: parent.height
+        color: "#088A68"
         Text {
             id: topTitle
-            color: "#ffffff"
+            color: "#000000"
             text: qsTr("QADBHelper")
             font.bold: true
             anchors{
-                top: container.top
                 left:container.left
-                margins: {
-                    left:5
-                    top:5
+                margins:{
+                    left: 10
                 }
+                verticalCenter: parent.verticalCenter
             }
         }
         Rectangle{
             id:closeRect
-            width:16
-            height:16
-            radius: 8
+            width:20
+            height:20
+            radius: 10
             property string hoveredColor: "#FF0000"
             property string normalColor: "#FA5858"
             color: normalColor
             anchors{
                 right:container.right
-                top:container.top
-                margins: {
+                verticalCenter: parent.verticalCenter
+                margins:{
                     top:5
-                    right:5
                 }
             }
             Image {
@@ -44,6 +42,7 @@ Item {
                 source: "qrc:/close"
                 width: 16
                 height: 16
+                anchors.centerIn: parent
             }
             MouseArea {
                 anchors.fill: parent
@@ -55,12 +54,10 @@ Item {
                     closeRect.color = closeRect.normalColor
                 }
                 onClicked: {
-                    root.close()
+                    console.log("close")
+                    root.closeImgClicked()
                 }
             }
         }
     }
-
-
-
 }

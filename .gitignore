@@ -72,3 +72,6 @@ Thumbs.db
 *.exe
 
 /CMakeLists.txt.user
+/.vscode
+/adb
+/build
