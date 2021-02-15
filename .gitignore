@@ -74,3 +74,6 @@ Thumbs.db
 /CMakeLists.txt.user
 /.vscode
 /build
+/.vs
+/out
+/adb/.vs
