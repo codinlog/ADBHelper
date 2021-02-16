@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{1f633d9f-03cb-4fc4-9a2a-a44c88543a29}</ProjectGuid>
+    <RootNamespace>ADB</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);ADB_HOST</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="adb.cpp" />
+    <ClCompile Include="adbd_auth.cpp" />
+    <ClCompile Include="adb_auth_host.cpp" />
+    <ClCompile Include="adb_client.cpp" />
+    <ClCompile Include="adb_io.cpp" />
+    <ClCompile Include="adb_io_test.cpp" />
+    <ClCompile Include="adb_listeners.cpp" />
+    <ClCompile Include="adb_listeners_test.cpp" />
+    <ClCompile Include="adb_trace.cpp" />
+    <ClCompile Include="adb_utils.cpp" />
+    <ClCompile Include="adb_utils_test.cpp" />
+    <ClCompile Include="bugreport.cpp" />
+    <ClCompile Include="bugreport_test.cpp" />
+    <ClCompile Include="client\main.cpp" />
+    <ClCompile Include="client\usb_dispatch.cpp" />
+    <ClCompile Include="client\usb_libusb.cpp" />
+    <ClCompile Include="client\usb_linux.cpp" />
+    <ClCompile Include="client\usb_osx.cpp" />
+    <ClCompile Include="client\usb_windows.cpp" />
+    <ClCompile Include="commandline.cpp" />
+    <ClCompile Include="console.cpp" />
+    <ClCompile Include="daemon\main.cpp" />
+    <ClCompile Include="daemon\mdns.cpp" />
+    <ClCompile Include="daemon\usb.cpp" />
+    <ClCompile Include="diagnose_usb.cpp" />
+    <ClCompile Include="fdevent.cpp" />
+    <ClCompile Include="fdevent_test.cpp" />
+    <ClCompile Include="file_sync_client.cpp" />
+    <ClCompile Include="file_sync_service.cpp" />
+    <ClCompile Include="framebuffer_service.cpp" />
+    <ClCompile Include="jdwp_service.cpp" />
+    <ClCompile Include="line_printer.cpp" />
+    <ClCompile Include="remount_service.cpp" />
+    <ClCompile Include="services.cpp" />
+    <ClCompile Include="set_verity_enable_state_service.cpp" />
+    <ClCompile Include="shell_service.cpp" />
+    <ClCompile Include="shell_service_protocol.cpp" />
+    <ClCompile Include="shell_service_protocol_test.cpp" />
+    <ClCompile Include="shell_service_test.cpp" />
+    <ClCompile Include="sockets.cpp" />
+    <ClCompile Include="socket_spec.cpp" />
+    <ClCompile Include="socket_spec_test.cpp" />
+    <ClCompile Include="socket_test.cpp" />
+    <ClCompile Include="sysdeps\errno.cpp" />
+    <ClCompile Include="sysdeps\posix\network.cpp" />
+    <ClCompile Include="sysdeps\stat_test.cpp" />
+    <ClCompile Include="sysdeps\win32\errno.cpp" />
+    <ClCompile Include="sysdeps\win32\errno_test.cpp" />
+    <ClCompile Include="sysdeps\win32\stat.cpp" />
+    <ClCompile Include="sysdeps_test.cpp" />
+    <ClCompile Include="sysdeps_unix.cpp" />
+    <ClCompile Include="sysdeps_win32.cpp" />
+    <ClCompile Include="sysdeps_win32_test.cpp" />
+    <ClCompile Include="transport.cpp" />
+    <ClCompile Include="transport_local.cpp" />
+    <ClCompile Include="transport_mdns.cpp" />
+    <ClCompile Include="transport_mdns_unsupported.cpp" />
+    <ClCompile Include="transport_test.cpp" />
+    <ClCompile Include="transport_usb.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="adb.h" />
+    <ClInclude Include="adb_auth.h" />
+    <ClInclude Include="adb_client.h" />
+    <ClInclude Include="adb_io.h" />
+    <ClInclude Include="adb_listeners.h" />
+    <ClInclude Include="adb_mdns.h" />
+    <ClInclude Include="adb_trace.h" />
+    <ClInclude Include="adb_unique_fd.h" />
+    <ClInclude Include="adb_utils.h" />
+    <ClInclude Include="bugreport.h" />
+    <ClInclude Include="commandline.h" />
+    <ClInclude Include="daemon\mdns.h" />
+    <ClInclude Include="daemon\usb.h" />
+    <ClInclude Include="diagnose_usb.h" />
+    <ClInclude Include="fdevent.h" />
+    <ClInclude Include="fdevent_test.h" />
+    <ClInclude Include="file_sync_service.h" />
+    <ClInclude Include="line_printer.h" />
+    <ClInclude Include="remount_service.h" />
+    <ClInclude Include="security_log_tags.h" />
+    <ClInclude Include="services.h" />
+    <ClInclude Include="shell_service.h" />
+    <ClInclude Include="socket.h" />
+    <ClInclude Include="socket_spec.h" />
+    <ClInclude Include="sysdeps.h" />
+    <ClInclude Include="sysdeps\chrono.h" />
+    <ClInclude Include="sysdeps\errno.h" />
+    <ClInclude Include="sysdeps\network.h" />
+    <ClInclude Include="sysdeps\stat.h" />
+    <ClInclude Include="transport.h" />
+    <ClInclude Include="usb.h" />
+    <ClInclude Include="utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Android.mk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="OVERVIEW.TXT" />
+    <Text Include="protocol.txt" />
+    <Text Include="SERVICES.TXT" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
