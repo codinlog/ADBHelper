@@ -1,5 +1,4 @@
 #include "adbengine.h"
-#include "adbhelper.h"
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 

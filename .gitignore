@@ -68,9 +68,12 @@ Thumbs.db
 *.dll
 *.exe
 
-/CMakeLists.txt.user
 /.vscode
-/build
-/.vs
-/out
-/adb/.vs
+*/build
+*/.vs
+*/out
+*/adb/.vs
+*/target
+Cargo.lock
+
+*/CMakeLists.txt.user

@@ -30,7 +30,7 @@ set(PROJECT_SOURCES ${HEADER} ${SOURCE} ${QRC} ${TS_FILES})
 
 add_executable(QADBHelper ${PROJECT_SOURCES})
 
-qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+qt6_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 
 target_compile_definitions(
   QADBHelper
